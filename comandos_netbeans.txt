@@ -1,0 +1,3 @@
+alt+insert -> generar automaticmente set get constructor
+ctrl+space -> quick popup file selector
+atl+shift+f -> restrutra codigo, desde una linea

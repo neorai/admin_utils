@@ -1,0 +1,42 @@
+sudo apt-get install apache2
+
+sudo apt-get -y install mysql-server-5.7
+
+sudo add-apt-repository ppa:ondrej/php
+sudo apt update
+sudo apt install php5.6 libapache2-mod-php5.6 php5.6-curl php5.6-gd php5.6-mbstring php5.6-mcrypt php5.6-mysql php5.6-xml php5.6-xmlrpc
+
+sudo apt-get install phpmyadmin
+
+/*
+* SOAP -> modulo extra
+*/
+sudo apt-get php5.6-soap
+sudo pear install  "descargar desde pagina oficial wsdl2php"
+
+
+/*
+* activar puerto de mysql
+*/
+/etc/mysql/mysql.conf.d/mysqld.cnf
+comentar las lineas
+#skip-external-locking
+#bind-address		= 127.0.0.1
+
+/*
+* activar errores
+*/
+error_reporting = E_ALL
+display_errors = on
+
+sudo nmap -sS localhost // ver si esta el puerto de mysql
+
+/**
+* consultar modulos
+*/
+<?php
+phpinfo();
+?>
+
+
+/etc/php/5.6/apache2
